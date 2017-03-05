@@ -252,7 +252,7 @@ a.sidebar-nav-item:focus {
 
 /* Custom Stuff */
 
-img.sidebar-portrait {
+.sidebar-portrait {
     display: block;
     margin: auto;
     margin-bottom: 2rem;
