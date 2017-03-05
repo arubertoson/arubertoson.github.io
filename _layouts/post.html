@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% include format_tags.html %}
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">
+      <a href="{{ site.baseurl }}archive">{{ page.date | date: "%B %d, %Y"}}</a> {{ formated_tags }}
+  </span>
+
+  {{ content }}
+
+  <div class="post-social">
+      <!-- twitter -->
+      <i class="fa fa-lg fa-twitter-square"></i>
+
+  </div>
+
+
+</div>
+
+<!-- Include disqus if specified in _config -->
+{% if site.disqus %}
+<div class="post-comments">
+  {% include disqus.html %}
+</div>
+{% endif %}

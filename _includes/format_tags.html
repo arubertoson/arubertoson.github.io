@@ -1,0 +1,14 @@
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+
+    {% for tag_name in post.tags %}
+      {% assign tag = site.tags | where: "name", tag_name | first %}
+      {% if tag %}
+        {% capture _tmp %}{{ formated_tags }}<a class="post-tags" href="{{ tag.url }}">#{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+        {% assign formated_tags = _tmp %}
+      {% endif %}
+    {% endfor %}
+
+{% else %}
+    {% assign formated_tags = '' %}
+{% endif %}

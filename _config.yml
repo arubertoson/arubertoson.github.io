@@ -1,0 +1,56 @@
+permalink: /:year/:month/:day/:title
+# highlighter: pygments
+highlighter: rouge
+# markdown: redcarpet
+markdown: kramdown
+excerpt_separator: <!--more-->
+
+
+exclude: [
+  README.md,
+  localserver,
+  build,
+  Gemfile,
+  Gemfile.lock
+]
+
+redcarpet:
+  extensions: ["smart"]
+
+
+# Custom Stuff
+paginate: 5
+
+collections:
+  tags:
+    output: true
+    permalink: /tags/:name/
+  projects:
+    output: true
+    premalink: /projects/:name/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: tags
+    values:
+      layout: tag_page
+  -
+    scope:
+      path: ""
+      type: projects
+    values:
+      layout: project_page
+
+
+# Comments
+disqus: "arubertoson"
+
+# Setup
+name: Marcus Albertsson
+title: Marcus Albertsson
+tagline: Personal Blog
+description: This is a blog about my development adventures and other interests.
+url: https://arubertoson.github.io
+baseurl: /
