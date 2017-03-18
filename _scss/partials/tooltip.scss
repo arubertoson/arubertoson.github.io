@@ -1,0 +1,63 @@
+@import "../modules/mixin.scss";
+// Usage: <a href="some/link" data-tooltip="Some Tooltip Text"></a>
+
+[data-tooltip] {
+  display: inline;
+  outline: none;
+  position: relative;
+  z-index: 2;
+}
+
+// Hide the tooltip content by default
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+}
+
+// Position tooltip above the element
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  white-space: pre;
+  min-width: 80px;
+  max-width: 260px;
+
+  margin-bottom: 5px;
+  padding: 7px;
+
+  @include border-radius(3px);
+  @include bg-fg-color(gray, #fff);
+
+  // background-color: gray;
+  // color: #fff;
+
+  content: attr(data-tooltip);
+  text-align: center;
+
+  // TODO: _fonts
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1rem;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -.5rem;
+
+  border-top: 5px solid gray;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+}

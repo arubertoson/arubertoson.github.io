@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?wpm0n3');
+  src:  url('fonts/icomoon.eot?wpm0n3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?wpm0n3') format('truetype'),
+    url('fonts/icomoon.woff?wpm0n3') format('woff'),
+    url('fonts/icomoon.svg?wpm0n3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Feedly:before {
+  content: "\e903";
+}
+.icon-twitter-square:before {
+  content: "\e900";
+}
+.icon-rss2:before {
+  content: "\ea9c";
+}
+.icon-github-square:before {
+  content: "\e901";
+}
+.icon-artstation:before {
+  content: "\e902";
+}
+.icon-vimeo2:before {
+  content: "\eaa1";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+

@@ -52,6 +52,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
+
 @media (min-width: 38em) {
   html {
     font-size: 20px;
@@ -261,6 +262,8 @@ tbody tr:nth-child(odd) th {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -354,7 +357,6 @@ tbody tr:nth-child(odd) th {
 .pagination-title {
   font-size: 2rem;
   margin-bottom: .5rem;
-
 }
 
 /* Meta data line below post title */

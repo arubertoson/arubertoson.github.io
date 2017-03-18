@@ -1,8 +1,8 @@
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
+<div class="nav">
+  <div class="container nav-sticky">
+    <div class="nav-about">
 
-        <img class="sidebar-portrait" alt="Marcus Albertsson" src="{{ site.baseurl}}portrait.jpg"/ height="256">
+        <!-- <img class="sidebar-portrait" alt="Marcus Albertsson" src="{{ site.baseurl}}portrait.jpg"/ height="256"> -->
 
       <h1>
         <a href="{{ site.baseurl }}">
@@ -14,8 +14,8 @@
 
     </div>
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+    <nav class="nav">
+        <!-- <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a> -->
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -30,6 +30,16 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+
+      <p class="nav-icons sidebar-im-lg im-invert">
+        <a href="{{ site.social.twitter }}" data-tooltip="twitter"><i class="icon-twitter-square"></i></a>
+        <a href="{{ site.social.linkedin }}" data-tooltip="linkedin"><i class="icon-linkedin"></i></a>
+        <a href="{{ site.social.github }}" data-tooltip="github"><i class="icon-github-square"></i></a>
+        <a href="{{ site.social.artstation }}" data-tooltip="artstation"><i class="icon-artstation"></i></a>
+        <a href="{{ site.social.vimeo }}" data-tooltip="vimeo"><i class="icon-vimeo"></i></a>
+        <a href="{{ site.social.rss }}" data-tooltip="rss"><i class="icon-rss"></i></a>
+        <a href="{{ site.social.feedly }}" data-tooltip="feedly"><i class="icon-feedly"></i></a>
+      </p>
 
     </nav>
 
